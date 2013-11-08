@@ -14,7 +14,7 @@ def _patch_redirect():
 
     from Acquisition import aq_parent
     from inigo.redirecttocontainer.interfaces import IRedirector
-    from zope.component import queryAdapter
+    from zope.component import queryAdapter, getAdapters
 
     _getArg = RedirectTo.getArg
 
@@ -27,7 +27,6 @@ def _patch_redirect():
         context = controller_state.getContext()
 
         adapters = getAdapters((context,), IRedirector)
-
         for name, adapter in adapters:
             if adapter.can_handle():
                 return adapter.get_url()

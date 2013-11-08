@@ -1,8 +1,10 @@
 from five import grok
 from Acquisition import aq_parent, aq_chain
+from inigo.redirecttocontainer.interfaces import IRedirector
 
 class BaseRedirector(grok.Adapter):
     grok.baseclass()
+    grok.implements(IRedirector)
 
     container_iface = None
     direct_parent = False
