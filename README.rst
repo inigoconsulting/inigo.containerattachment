@@ -1,4 +1,4 @@
-README for inigo.containerattachment
+README for inigo.redirecttocontainer
 ==========================================
 
 This product contains traces of nuts

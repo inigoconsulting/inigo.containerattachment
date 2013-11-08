@@ -7,18 +7,11 @@
     xmlns:grok="http://namespaces.zope.org/grok"
     xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
-    i18n_domain="inigo.containerattachment">
+    i18n_domain="inigo.redirecttocontainer">
 
     <includeDependencies package="." />
     <grok:grok package="." />
     <i18n:registerTranslations directory="locales" />
-
-    <include package=".behavior"/>
-    <include package=".portlet"/>
-
-    <browser:resourceDirectory 
-        name="inigo.containerattachment"
-        directory="static"/>
 
     <!-- -*- extra stuff goes here -*- -->
 

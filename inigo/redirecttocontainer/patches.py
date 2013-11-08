@@ -1,6 +1,6 @@
 from logging import getLogger
 
-logger = getLogger('inigo.containerattachment')
+logger = getLogger('inigo.redirecttocontainer')
 
 def _patch_redirect():
     # XXX: really ugly patch
@@ -13,7 +13,7 @@ def _patch_redirect():
     logger.info('Patching CMFFormController RedirectTo')
 
     from Acquisition import aq_parent
-    from inigo.containerattachment.interfaces import IRedirector
+    from inigo.redirecttocontainer.interfaces import IRedirector
     from zope.component import queryAdapter
 
     _getArg = RedirectTo.getArg

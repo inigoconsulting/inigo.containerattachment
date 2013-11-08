@@ -3,7 +3,7 @@ import os
 
 version = '1.0.0a1'
 
-setup(name='inigo.containerattachment',
+setup(name='inigo.redirecttocontainer',
       version=version,
       description="",
       long_description=open("README.rst").read() + "\n" +
